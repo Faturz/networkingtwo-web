@@ -35,6 +35,7 @@ html {
         justify-content: space-around;
         align-items: center;
         border-radius: 20px;
+        z-index: 1000000;
 }
 
 .title h1 {
@@ -57,12 +58,12 @@ html {
         text-decoration: none;
         color: #fff;
         padding: 10px;
-        transition: 0.4s;
+        transition: ease-in-out all 0.4s;
 }
 
 .header a:hover {
-        color: #2129ff;
-        border-bottom: 2px solid #2129ff;
+        color: #3D9CFF;
+        border-bottom: 2px solid #fff;
 }
 
 .login {
@@ -76,7 +77,14 @@ html {
 }
 
 .login a:hover {
+        background: #3D9CFF;
         border-bottom: none;
+        color: #fff;
+}
+
+.login a:hover:last-child {
+        background: #00000000;
+        color: #3D9CFF;
 }
 
 .menuToogle {
@@ -167,6 +175,15 @@ html {
         border-radius: 8px;
         font-weight: 600;
         background: #00046F;
+        transition: ease-in-out all 0.2s;
+}
+
+.btnHome a:hover {
+        background: #3D9CFF;
+}
+
+.btnHome a:hover:nth-child(2) {
+        color: #3D9CFF;
 }
 
 .btnHome a:nth-child(2) {
@@ -217,7 +234,14 @@ html {
         margin-inline: 22rem;
         padding: 20px;
         border-radius: 80px 20px;
+        transition: all ease-in-out 0.3s;
 }
+
+.contentSt:hover {
+        scale: 1.08;
+        color: #00046F;
+}
+
 
 .contentSt h3 {
         border-bottom: 1px solid #000;
@@ -243,11 +267,81 @@ html {
 
 
 .memory {
+        padding-top: 10rem;
         width: 100%;
-        height: 100vh;
-        background: #fff        ;
+        height: 400vh;
+        background: #000;
 }
 
+.memory h1 {
+        text-align: center;
+}
+
+.memSlide {
+}
+
+.sliders {
+        overflow: hidden;
+        display: flex;
+}
+
+.sliders input {
+        display: flex;
+}
+
+.slides {
+        width: 20%;
+        transition: 2s;
+}
+
+.sliders img {
+        width: 800px;
+        height: 500px;
+}
+
+.navManual {
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+}
+
+.manualBtn {
+        border: 2px solid #fff;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+        margin-right: 40px;
+}
+
+.manualBtn:hover {
+        background: #fff;
+}
+
+#radio-1:checked ~ .first {
+        margin-left: 0;
+}
+
+#radio-2:checked ~ .first {
+        margin-left: 20%;
+}
+
+#radio-3:checked ~ .first {
+        margin-left: 40%;
+}
+
+#radio-4:checked ~ .first {
+        margin-left: 60%;
+}
+
+#radio-5:checked ~ .first {
+        margin-left: 90%;
+}
 
 
 
@@ -341,5 +435,22 @@ html {
         .bx {
                 margin: 40px;
         }
+
+        
+
+        /* structure */
+
+        .about {
+                padding-top: 3rem;
+                background: #000;
+                color: #fff;
+        }
+
+
+
+
+
+
+
 }
 
