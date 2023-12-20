@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+}
+
+body {
+        overflow-x: hidden;
+        background: #000;
+}
+
+html {
+        scroll-behavior: smooth;
+}
+
+.mg {
+        margin-inline: 10%;
+}
+
+.header {
+        top: 2px;
+        margin-inline: 10%;
+        width: 76%;
+        padding: 20px;
+        position: fixed;
+        background: #00000059;
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+        z-index: 1000000;
+}
+
+.title h1 {
+        border-right: 1px solid #fff;
+        padding-right: 60px;
+        padding-left: 20px;
+        color: #fff;
+        cursor: pointer;
+}
+
+.header ul {
+        padding-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        text-align: center;
+}
+
+.header a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        transition: ease-in-out all 0.4s;
+}
+
+.header a:hover {
+        color: #3D9CFF;
+        border-bottom: 2px solid #fff;
+}
+
+.login {
+        margin-top: -9px;
+}
+
+.login a:nth-child(1) {
+        background: #000773B8;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+}
+
+.login a:hover {
+        background: #3D9CFF;
+        border-bottom: none;
+        color: #fff;
+}
+
+.login a:hover:last-child {
+        background: #00000000;
+        color: #3D9CFF;
+}
+
+.menuToogle {
+        display: none;
+        flex-direction: column;
+        height: 21.5px;
+        justify-content: space-between;
+        position: relative;
+}
+
+.menuToogle input {
+        position: absolute;
+        width: 20px;
+        height: 28px;
+        left: -5.5px;
+        opacity: 0;
+        z-index: 2;
+}
+
+/* animation */
+
+.menuToogle span:nth-child(2) {
+        transform-origin: 0 0;
+        
+}
+
+.menuToogle span:nth-child(4) {
+        transform-origin: 0 0;
+}
+
+.menuToogle input:checked ~ span:nth-child(2) {
+        transform: rotate(45deg) translate(1px , 0px);
+}
+
+.menuToogle input:checked ~ span:nth-child(3) {
+        opacity: 0;
+        scale: 0;
+}
+
+.menuToogle input:checked ~ span:nth-child(4) {
+        transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+.menuToogle span {
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: 0.5s;
+
+}
+
+/* home */
+
+.home {
+        width: 100%;
+        height: 100vh;
+        padding-top: 10rem;
+        color: #fff;
+}
+ 
+.wrapperHome {
+        display: flex;
+        margin-inline: 50px;
+}
+
+.textHome {
+        margin-right: 5rem;
+}
+
+.contentHome img {
+        width: 70%;
+        margin-left: 7rem;
+        margin-top: -2rem;
+}
+
+
+.btnHome {
+        margin-left: 50px;
+        display: flex;
+}
+
+.btnHome a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        background: #00046F;
+        transition: ease-in-out all 0.2s;
+}
+
+.btnHome a:hover {
+        background: #3D9CFF;
+}
+
+.btnHome a:hover:nth-child(2) {
+        color: #3D9CFF;
+}
+
+.btnHome a:nth-child(2) {
+        background: transparent;
+}
+
+.boxHome {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-around;
+}
+
+.bx {
+        border: 1px solid #fff;
+        padding: 20px;
+        border-radius: 8px 20px;
+}
+
+.border {
+        border-bottom: 1px solid #fff;
+        margin-top: 40px;
+}
+
+
+
+/* about */
+
+.about {        
+        width: 100%;
+        height: 300vh;
+        background: #000;
+        color: #fff;
+        padding-top: 8rem;
+}
+
+.about h1 {
+        text-align: center;
+        padding-bottom: 8rem;
+}
+
+.contentSt {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+        color: #fff;
+        margin: 20px;
+        margin-inline: 22rem;
+        padding: 20px;
+        border-radius: 80px 20px;
+        transition: all ease-in-out 0.3s;
+}
+
+.contentSt:hover {
+        scale: 1.08;
+        color: #00046F;
+}
+
+
+.contentSt h3 {
+        border-bottom: 1px solid #fff;
+        margin: 20px;
+        margin-inline: 6rem;
+}
+
+.contentSt p {
+        border-bottom: 1px solid #fff;
+        margin: 10px;
+        margin-inline: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.memory {
+        padding-top: 10rem;
+        width: 100%;
+        height: 400vh;
+        background: #000;
+}
+
+.memory h1 {
+        text-align: center;
+}
+
+.memSlide {
+}
+
+.sliders {
+        overflow: hidden;
+        display: flex;
+}
+
+.sliders input {
+        display: flex;
+}
+
+.slides {
+        width: 20%;
+        transition: 2s;
+}
+
+.sliders img {
+        width: 800px;
+        height: 500px;
+}
+
+.navManual {
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+}
+
+.manualBtn {
+        border: 2px solid #fff;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+        margin-right: 40px;
+}
+
+.manualBtn:hover {
+        background: #fff;
+}
+
+#radio-1:checked ~ .first {
+        margin-left: 0;
+}
+
+#radio-2:checked ~ .first {
+        margin-left: 20%;
+}
+
+#radio-3:checked ~ .first {
+        margin-left: 40%;
+}
+
+#radio-4:checked ~ .first {
+        margin-left: 60%;
+}
+
+#radio-5:checked ~ .first {
+        margin-left: 90%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+        .header {
+                width: 73%;
+        }
+        
+        .header h1 { 
+                padding-left: 80px;
+        }
+        
+        .header ul {
+                background: #00000073;
+                backdrop-filter: blur(20px);
+                border-radius: 10px;
+                padding: 20px;
+                position: absolute;
+                align-items: center;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                margin-top: 120%;
+                left: 60%;
+                transform: translateY(-150%);
+                transition: all 0.5s;
+                opacity: 0;
+                z-index: -1;
+                height: 0;
+        }
+        
+        .header ul.slide {
+                height: 50vh;
+                opacity: 1;
+                transform: translateY(0);
+        }
+        
+        .header a {
+                height: 10px;
+        }
+        
+        .header a:hover {
+                border: none;
+        }
+        
+        .login ul {
+                text-align: center;
+                margin-top: 40%;
+                display: inline;
+                left: 55%;
+        }
+        
+        .menuToogle {
+                margin: 8px 70px 8px 40px;
+                display: flex;
+        }
+        
+       
+        
+       /* > home < */
+       
+        .wrapperHome {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+        }
+        
+        .textHome {
+                margin-inline: 0;
+        }
+        
+        .contentHome img {
+                margin-left: 0;
+        }
+        
+        .btnHome {
+                font-size: 12px;
+                margin-left: 0;
+                align-items: center;
+                justify-content: space-evenly;
+        }
+        
+        .boxHome {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 10px;
+                padding: 2px;
+        }
+        
+        .bx {
+                margin: 40px;
+        }
+
+        
+
+        /* structure */
+
+        .about {
+                padding-top: 3rem;
+                background: #000;
+                color: #fff;
+        }
+
+
+
+
+
+
+
+}
+
