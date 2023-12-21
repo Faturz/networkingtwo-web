@@ -5,8 +5,5 @@ menuToogle.addEventListener('click' , function () {
         nav.classList.toggle('slide')
 } )
 
-const notif = document.querySelector('.submit')
 
-notif.addEventListener('click ', function () {
-        alert('kontol')
-})
+
